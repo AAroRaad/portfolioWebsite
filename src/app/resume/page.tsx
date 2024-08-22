@@ -12,7 +12,8 @@ import {
 const about = {
     title: "About me",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut",
+      "Passionate professional with diverse expertise and a strong background in Front-End Development. " +
+        "Dedicated to delivering high-quality results and open to remote and hybrid opportunities",
     info: [
       {
         fieldName: "Name",
@@ -58,13 +59,13 @@ const experience = {
   icon: "/assets/resume/badge.svg",
   title: "My experience",
   description:
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-    "sed diam nonumy eirmod tempor invidunt ut",
+    "My experiences in front-end programming, UI/UX, and graphic design are as follows. " +
+      "Currently, I am working as a front-end developer.",
   items: [
     {
       company: "Jin Co.",
       position: "Front-End Developer",
-      duration: "2022 - Present",
+      duration: "Dec 2021 - Present",
     },
     {
       company: "Jin Co.",
@@ -74,17 +75,17 @@ const experience = {
     {
       company: "Educational Projects",
       position: "Front-End Developer",
-      duration: "2022 - 2023",
+      duration: "Jul 2020 - Dec 2021",
     },
     {
       company: "ComeBack Co.",
       position: "UI/UX & Graphic Designer",
-      duration: "Feb 2022 - Sep 2022",
+      duration: "Feb 2021 - Jun 2021",
     },
     {
       company: "Jin Co.",
       position: "UI/UX & Graphic Designer",
-      duration: "2021 - 2022",
+      duration: "Feb 2020 - Jan 2021",
     },
   ],
 };
@@ -94,8 +95,9 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My education",
   description:
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-    "sed diam nonumy eirmod tempor invidunt ut",
+    "My field of study was Urban Planning, and I earned my bachelor's degree in this field. " +
+      "Then, I received extensive training, first in UI/UX and later in front-end programming, " +
+      "and I have completed many educational projects in these areas.",
   items: [
     {
       institution: "Online Course Platform",
@@ -129,8 +131,7 @@ const education = {
 const skills = {
   title: "My skills",
   description:
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-    "sed diam nonumy eirmod tempor invidunt ut",
+    "The skills I have learned during this time are as follows:",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -275,15 +276,18 @@ const Resume = () => {
                     {skills.description}
                   </h3>
                 </div>
-                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px] mb-10 md:mb-0">
                   {skills.skillList.map((skill, index) => {
                     return (
                       <li key={index}>
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
-                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex flex-col gap-4 lg:gap-0 lg:flex-row justify-center items-center group">
                               <div className="text-6xl group-hover:text-accent transition-all duration-300">
                                 {skill.icon}
+                              </div>
+                              <div className='text-lg group-hover:text-accent transition-all duration-300 lg:hidden capitalize'>
+                                {skill.name}
                               </div>
                             </TooltipTrigger>
                             <TooltipContent>
@@ -302,7 +306,7 @@ const Resume = () => {
               <div className='flex flex-col gap-[30px]'>
                 <h3 className='text-4xl font-bold'>{about.title}</h3>
                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{about.description}</p>
-                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0'>
+                <ul className='grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0 mb-10 xl:mb-0'>
                   {about.info.map((item, index) => {
                     return (
                         <li key={index} className='flex items-center justify-center xl:justify-start gap-4'>
