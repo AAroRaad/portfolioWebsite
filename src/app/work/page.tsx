@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { BsArrowUpRight, BsGithub, BsGitlab } from "react-icons/bs";
+import { BsArrowUpRight, BsGitlab } from "react-icons/bs";
 
 import {
   Tooltip,
@@ -18,6 +18,17 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+
+interface Project {
+  num: string;
+  category: string;
+  title: string;
+  description: string;
+  stack: { name: string }[];
+  image: string;
+  live: string;
+  gitlab: string;
+}
 
 const projects = [
   {
@@ -67,8 +78,8 @@ const projects = [
 ];
 
 const Work = () => {
-  const [project, setProject] = useState(projects[0]);
-  const handleSlideChange = (swiper) => {
+  const [project, setProject] = useState<Project>(projects[0]);
+  const handleSlideChange = (swiper: any) => {
     //get current slide index
     const currentIndex = swiper.activeIndex;
     // update project state based on current slide index

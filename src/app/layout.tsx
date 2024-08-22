@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import React from "react";
+import React, {ReactNode} from "react";
 import {JetBrains_Mono, Roboto, Oswald, Titillium_Web} from "next/font/google";
 
 //components
