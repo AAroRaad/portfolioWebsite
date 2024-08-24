@@ -120,6 +120,31 @@ const education = {
       duration: "2022",
     },
     {
+      institution: "The Ultimate React Course",
+      degree: "Front-End Development",
+      duration: "2021",
+    },
+    {
+      institution: "Project-based React training",
+      degree: "Front-End Development",
+      duration: "2020",
+    },
+    {
+      institution: "User Experience Design Essentials – Adobe XD UI UX Design",
+      degree: "UI/UX Design",
+      duration: "2019",
+    },
+    {
+      institution: "Comprehensive User Interface (UI) Design Course",
+      degree: "UI/UX Design",
+      duration: "2019",
+    },
+    {
+      institution: "User Experience (UX) Specialist Course",
+      degree: "UI/UX Design",
+      duration: "2019",
+    },
+    {
       institution: "Payamnoor University",
       degree: "Bachelor of Urban Engineering",
       duration: "2013 - 2018",
