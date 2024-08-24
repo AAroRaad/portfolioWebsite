@@ -8,23 +8,24 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+      "I'm a front-end developer specializing in React, Next.js, and Tailwind CSS. I focus on building responsive, " +
+        "user-friendly web interfaces and delivering seamless, dynamic experiences across all devices.",
     href: "",
   },
-  {
-    num: "02",
-    title: "UI/UX Design",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
-    href: "",
-  },
-  {
-    num: "03",
-    title: "Graphic Design",
-    description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
-    href: "",
-  },
+  // {
+  //   num: "02",
+  //   title: "UI/UX Design",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+  //   href: "",
+  // },
+  // {
+  //   num: "03",
+  //   title: "Graphic Design",
+  //   description:
+  //     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+  //   href: "",
+  // },
 ];
 
 import { motion } from "framer-motion";
