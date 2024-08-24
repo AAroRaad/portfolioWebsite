@@ -36,11 +36,16 @@ const projects = [
     category: "frontend",
     title: "project 1",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-      "sed diam nonumy eirmod tempor invidunt ut",
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
+      "Front-End developer for the online doctor appointment scheduling project.",
+    stack: [
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Postman" },
+      { name: "Gitlab" },
+    ],
     image: "/assets/work/thumb1.png",
-    live: "",
+    live: "https://jimare24.com/",
     gitlab: "",
   },
   {
@@ -48,12 +53,13 @@ const projects = [
     category: "frontend",
     title: "project 2",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-      "sed diam nonumy eirmod tempor invidunt ut",
+      "Front-End developer for the doctor appointment management project",
     stack: [
-      { name: "React.js" },
-      { name: "Tailwind.css" },
-      { name: "Javascript" },
+      { name: "Next.js" },
+      { name: "TypeScript" },
+      { name: "Tailwind CSS" },
+      { name: "Postman" },
+      { name: "Gitlab" },
     ],
     image: "/assets/work/thumb2.png",
     live: "",
@@ -64,15 +70,62 @@ const projects = [
     category: "frontend",
     title: "project 3",
     description:
-      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, " +
-      "sed diam nonumy eirmod tempor invidunt ut",
+      "Front-End developer for the multi-brand login project.",
     stack: [
-      { name: "Next.js" },
-      { name: "Tailwind.css" },
-      { name: "Typescript" },
+      { name: "React.js" },
+      { name: "JavaScript" },
+      { name: "Tailwind CSS" },
+      { name: "Postman" },
+      { name: "Github" },
     ],
     image: "/assets/work/thumb3.png",
-    live: "",
+    live: "https://login.ahoora.pro/?brand=jimare",
+    gitlab: "",
+  },
+  {
+    num: "04",
+    category: "frontend",
+    title: "project 4",
+    description:
+        "Front-End developer for the portfolio project.",
+    stack: [
+      { name: "React.js" },
+      { name: "Javascript" },
+      { name: "Material UI" },
+      { name: "Github" },
+    ],
+    image: "/assets/work/thumb3.png",
+    live: "https://portfolio-red-alpha-12.vercel.app/",
+    gitlab: "",
+  },
+  {
+    num: "05",
+    category: "ui/ux",
+    title: "project 5",
+    description:
+        "Ui/Ux Designer for the Jin's administrative panel project.",
+    stack: [
+      { name: "Adobe Xd" },
+      { name: "Adobe Photoshop" },
+      { name: "Adobe Illustrator" },
+    ],
+    image: "/assets/work/thumb3.png",
+    live: "https://xd.adobe.com/view/a3fdfdee-d01f-427d-a281-e8f0bf1b78eb-f6ae/",
+    gitlab: "",
+  },
+  {
+    num: "06",
+    category: "ui/ux",
+    title: "project 6",
+    description:
+        "Ui/Ux Designer for the Redesign of comeback android app project.",
+    stack: [
+      { name: "Adobe Xd" },
+      { name: "Adobe Photoshop" },
+      { name: "Adobe Illustrator" },
+    ],
+    image: "/assets/work/thumb3.png",
+    live: "https://xd.adobe.com/view/be00362a-f6c1-448f-a9c3-8af6c164a929-eb53/",
     gitlab: "",
   },
 ];
@@ -192,10 +245,10 @@ const Work = () => {
               })}
               {/* slider buttons */}
               <WorkSliderBtns
-                  containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0
                   z-20 w-full justify-between xl:w-max xl:justify-none"
-                  btnStyles='bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px]
-                  h-[44px] flex justify-center items-center transition-all'
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px]
+                  h-[44px] flex justify-center items-center transition-all"
               />
             </Swiper>
           </div>
