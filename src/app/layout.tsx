@@ -27,7 +27,7 @@ const titillium = Titillium_Web({
 });
 
 export const metadata: Metadata = {
-  title: "Mohammad_KaramVeisehNezhad_Resume",
+  title: "Mohammad_KaramVeisehNezhad",
   description: "Resume",
 };
 
