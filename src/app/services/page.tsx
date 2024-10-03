@@ -10,7 +10,7 @@ const services = [
     description:
       "I'm a front-end developer specializing in React, Next.js, and Tailwind CSS. I focus on building responsive, " +
         "user-friendly web interfaces and delivering seamless, dynamic experiences across all devices.",
-    href: "",
+    href: "https://www.linkedin.com/in/mohammad-karamveysehnezhad-93831b183/",
   },
   // {
   //   num: "02",
@@ -58,6 +58,7 @@ const Services = () => {
                   </div>
                   <Link
                     href={service.href}
+                    target='_blank'
                     className="w-[70px] h-[70px] rounded-full bg-white group-hover:bg-accent transition-all
                     duration-500 flex justify-center items-center hover:-rotate-45"
                   >

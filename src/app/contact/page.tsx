@@ -14,7 +14,13 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaWhatsapp,
+  FaTelegram,
+} from "react-icons/fa";
 
 const info = [
   {
@@ -35,6 +41,13 @@ const info = [
 ];
 
 import { motion } from "framer-motion";
+import React from "react";
+import Link from "next/link";
+
+const socials = [
+  { icon: <FaTelegram />, path: "https://t.me/AAro_7" },
+  { icon: <FaWhatsapp />, path: "https://wa.me/qr/WCGG6XQ2MCI6J1" },
+];
 
 const Contact = () => {
   return (
@@ -51,9 +64,12 @@ const Contact = () => {
           {/* form */}
           <div className="xl:w-[54%] order-2 xl:order-none">
             <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-accent">Let`&apos;s work together</h3>
+              <h3 className="text-4xl text-accent">
+                Let`&apos;s work together
+              </h3>
               <p className="text-white/60">
-                Feel free to reach out to me for collaboration on your projects :
+                Feel free to reach out to me for collaboration on your projects
+                :
               </p>
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -81,29 +97,53 @@ const Contact = () => {
                 className="h-[200px]"
                 placeholder="Type your message here."
               />
-            {/* btn */}
-              <Button size={"md"} className='max-w-40'>
-                Send message
-              </Button>
+              {/* btn */}
+               <Button
+                   disabled
+                   onClick={(e) => e.preventDefault()}
+                   size={"md"}
+                   className="max-w-40"
+               >
+                 Send message
+               </Button>
             </form>
           </div>
           {/* info */}
-          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
-            <ul className='flex flex-col gap-10'>
+          <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none">
+            <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
                 return (
-                    <li key={index} className='flex items-center gap-6'>
-                      <div className='w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent
-                      rounded-md flex items-center justify-center'>
-                        <div className='text-[28px]'>{item.icon}</div>
-                      </div>
-                      <div className='flex-1'>
-                        <p className='text-white/60'>{item.title}</p>
-                        <h3 className='text-xl'>{item.description}</h3>
-                      </div>
-                    </li>
-                )
+                  <li key={index} className="flex items-center gap-6">
+                    <div
+                      className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] bg-[#27272c] text-accent
+                      rounded-md flex items-center justify-center"
+                    >
+                      <div className="text-[28px]">{item.icon}</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-white/60">{item.title}</p>
+                      <h3 className="text-xl">{item.description}</h3>
+                    </div>
+                  </li>
+                );
               })}
+              <div className="flex gap-6">
+                {socials.map((item, index) => {
+                  return (
+                      <Link
+                          href={item.path}
+                          key={index}
+                          className="w-12 h-12 text-3xl border border-accent rounded-full flex justify-center items-center text-accent
+                           hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                          passHref
+                          target="_blank"
+                          rel="noopener noreferrer"
+                      >
+                        {item.icon}
+                      </Link>
+                  );
+                })}
+              </div>
             </ul>
           </div>
         </div>
